@@ -880,16 +880,11 @@ form {
 }
 
 label {
-  display: flex;
-  flex-direction: column;
-  left: 0px;
-  color: white;
   font-size: 14px;
   font-family: Roboto;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.42px;
-  word-wrap: break-word;
   cursor: pointer;
 }
 
@@ -991,25 +986,22 @@ button.subscribe span {
 .modal-content {
   width: 528px;
   height: 581px;
-  flex-shrink: 0;
   border-radius: 4px;
   background: #fff;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   top: 221px;
-  position: absolute;
+  margin-bottom: 222px;
+  text-align: center;
+  padding: 40px;
+  position: relative;
 }
 
 .modal-content p {
   font-family: var(--text-font-family);
   color: var(--link-color);
   font-size: 20px;
-  top: 40px;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  font-size: 20px;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.6px;
@@ -1018,43 +1010,25 @@ button.subscribe span {
 .modal-form {
   display: flex;
   flex-direction: column;
-  width: 528px;
-  height: 581px;
-  flex-shrink: 0;
-  margin-left: 0px;
+  gap:10px;
 }
 
 .form-section {
-  width: 448px;
-  height: 342px;
-  flex-shrink: 0;
-  gap: 10px;
-  top: 75px;
-  position: absolute;
-  margin-left: 40px;
+  text-align: start;
 }
 
 .form-section label {
   color: #757575;
   font-family: var(--text-font-family);
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.12px;
   text-transform: none;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  left: 0;
-  margin-bottom: 4px;
-  margin-top: 10px;
+  text-align: start;
 }
 
 .form-section input {
-  width: 448px;
-  height: 40px;
-  flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   outline: none;
@@ -1064,7 +1038,8 @@ button.subscribe span {
 .input-1 {
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .icon-person-black-18dp-1 {
@@ -1093,9 +1068,6 @@ icon-email-black-18dp-1 {
 }
 
 .input-2 {
-  width: 448px;
-  height: 120px;
-  flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   outline: none;
@@ -1131,12 +1103,10 @@ icon-email-black-18dp-1 {
 }
 
 .checkbox {
-  width: 420px;
-  height: 24px;
-  left: 52px;
-  position: absolute;
+  position: relative;
   display: flex;
-  top: 430px;
+  gap: 8px;
+  cursor: pointer;
 }
 
 .checkbox:hover {
@@ -1193,18 +1163,13 @@ icon-email-black-18dp-1 {
 }
 
 .button-send-container button {
-  left: 140px;
   width: 200px;
   height: 50px;
-  position: relative;
-  top: 400px;
-  padding-bottom: 40px;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
   border: none;
-  padding: 10px;
   color: white;
   font-size: 16px;
   font-family: Roboto;
@@ -1297,11 +1262,11 @@ textarea {
 .js-menu-container.is-open {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #fff;
-  width: 320px;
+  width: 100%;
   height: 100%;
   padding: 48px 40px;
   z-index: 1;
@@ -1349,10 +1314,24 @@ textarea {
   letter-spacing: 0.02em;
   color: #212121;
 }
+.menu-mobile {
+  margin-top: 0;
+}
+
+
+
 
 .menu-mobile a:hover {
-  color: var(--highlight-color);
+  color: #2196f3;
   text-decoration: underline;
+}
+
+.icon-finger-mobile{
+  position: relative;
+  top: 20px;
+  right: 50px;
+  width: 16px;
+  height: 16px;
 }
 
 .contacts-mobile-menu .tel {
@@ -1362,7 +1341,7 @@ textarea {
   line-height: 40px;
   letter-spacing: 0.02em;
   text-align: left;
-  color: var(--highlight-color);
+  color: #2196f3;
   margin-left: 40px;
 }
 
@@ -1380,11 +1359,10 @@ textarea {
 
 .contacts-mobile-menu {
   line-height: 32px;
+   padding-top: 306px;
 }
 
-.contacts-mobile-menu {
-  padding-top: 206px;
-}
+
 
 .social-media-mobile a {
   font-family: Roboto;
@@ -1393,14 +1371,21 @@ textarea {
   line-height: 22px;
   letter-spacing: 0.02em;
   padding-bottom: 48px;
-  color: var(--highlight-color);
-  margin-left: 40px;
-  gap: 20px;
+  color: #2196f3;
 }
 
 .social-media-mobile {
+  display: flex;
   width: 100%;
   margin-top: 64px;
+  gap:5px;
+}
+
+.line{
+  height: 22px;
+  border: 1px solid;
+  color: rgba(33, 33, 33, 0.2);
+
 }
 
 /* Tablet */
@@ -1436,17 +1421,7 @@ textarea {
     gap: 50px;
   }
 
-  .modal-content {
-    width: 528px;
-    height: 581px;
-    flex-shrink: 0;
-    border-radius: 4px;
-    background: #fff;
-    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-    top: 221px;
-    position: absolute;
-  }
+  
 }
 /* Desktop */
 @media screen and (min-width: 1158px) {
@@ -1561,9 +1536,7 @@ textarea {
     margin-bottom: 0px;
   }
 
-  form {
-    margin-left: 40px;
-  }
+ 
 
   .social {
     padding-bottom: 90px;
